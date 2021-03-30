@@ -61,10 +61,11 @@ UNLUA_API void* GetCppInstanceFast(lua_State *L, int32 Index);
 /**
  * Functions to handle script containers
  */
-UNLUA_API void* NewScriptContainer(lua_State *L, const FScriptContainerDesc &Desc);
-UNLUA_API void* CacheScriptContainer(lua_State *L, void *Key, const FScriptContainerDesc &Desc);
-UNLUA_API void* GetScriptContainer(lua_State *L, int32 Index);
-UNLUA_API void* GetScriptContainer(lua_State *L, void *Key);
+void* NewScriptContainer(lua_State *L, const FScriptContainerDesc &Desc);
+void* CacheScriptContainer(lua_State *L, void *Key, const FScriptContainerDesc &Desc);
+void* GetScriptContainer(lua_State *L, int32 Index);
+void* GetScriptContainer(lua_State *L, void *Key);
+void RemoveCachedScriptContainer(lua_State *L, void *Key);
 
 /**
  * Functions to push FProperty array
